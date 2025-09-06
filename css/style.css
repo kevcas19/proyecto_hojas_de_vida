@@ -1,0 +1,208 @@
+/* Importamos una fuente desde Google Fonts similar a la del prototipo */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+/* Definimos variables de color para usar en todo el proyecto */
+:root {
+  --color-principal: #003366; /* Azul oscuro de la Unimagdalena */
+  --color-secundario: #005a9c; /* Azul del botón */
+  --color-fondo: #f4f4f4; /* Gris claro del fondo */
+  --color-tarjeta: #ffffff; /* Blanco de la tarjeta */
+  --color-texto: #333333; /* Color de texto principal */
+  --color-sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* Reseteo básico y estilos generales del body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+.content-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centra el contenido */
+}
+
+.main-header {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  padding: 0.8rem 0;
+}
+
+.logo-container {
+  display: flex; /* Pone el logo en una línea */
+  align-items: center; /* Lo alinea verticalmente al centro */
+}
+
+.logo-container img {
+  height: 70px; /* Altura del logo*/
+  margin-left: 1rem;
+}
+
+.user-info {
+  margin-right: 15px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.user-info img {
+  height: 3.5rem; /* Altura imagen*/
+  border-radius: 50%; /* Hace la imagen circular */
+  object-fit: cover; /* Evita que la imagen se deforme */
+  margin-right: 20px;
+}
+
+.main-header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.icons_info {
+  display: flex; /* Convierte el contenedor en flexbox */
+  align-items: center; /* Asegura que se alineen verticalmente */
+}
+
+.header_icons {
+  color: var(--color-texto);
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem; /* Espacio entre iconos */
+}
+
+.header-container a {
+  color: var(--color-texto);
+}
+
+#punticos_2 {
+  margin-right: 3rem;
+}
+
+.main-nav {
+  background-color: var(--color-principal);
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--color-fondo);
+  margin-right: 20px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+.main-content {
+  padding: 40px 0;
+}
+
+.main-content h1 {
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  margin-right: 15px;
+}
+
+.search-bar a {
+  color: var(--color-secundario);
+  text-decoration: none;
+}
+
+.student-grid {
+  display: grid; /* Crea columnas automáticas que se adaptan al espacio disponible */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px; /* Espacio entre las tarjetas */
+}
+
+.student-card {
+  background-color: var(--color-tarjeta);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px var(--color-sombra);
+  transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Efecto hover: la tarjeta se eleva un poco */
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--color-sombra);
+}
+
+.student-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.student-card h3 {
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.student-card p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.btn-ver {
+  display: inline-block;
+  background-color: var(--color-secundario);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver:hover {
+  background-color: var(--color-principal);
+}
+
+.social-links a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: var(--color-principal);
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: 700;
+}
+
+.main-footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #e0e0e0;
+  color: #777;
+}
